@@ -31,21 +31,21 @@ body {
 }
 .header-container {
   display: flex;
-  margin-top: -30px;
-  margin-bottom: -30px;
+  margin-top: -40px;
+  margin-bottom: -12em;
 }
 .header-container > div:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 90%;
-  margin-left: 10rem;
+  margin-left: 12%;
 }
 .header-container > div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 10%;
+  width: 15%;
 }
 .header-container > div > img {
   width: 100%;
@@ -151,6 +151,29 @@ button:active {
   /* color: #FF600F; */
   border: 2px solid black;
 }
+@media screen and (max-width: 1250px) {
+  .header-container{
+    margin-bottom: -3em;
+
+  }
+  .layout > div:nth-child(2) {
+    position: relative;
+  }
+  .layout {
+    flex-direction: column-reverse;
+  }
+  .layout > div:nth-child(1) {
+    width: 100%;
+  }
+  .progress-container,
+  .total-score {
+    width: 100%;
+    margin: auto;
+  }
+  .rs-steps {
+    margin-left: 60px;
+  }
+}
 @media screen and (max-width: 600px) {
   .bet-box,
   .header {
@@ -183,11 +206,11 @@ button:active {
     font-size: 12px;
   }
   .header-container > div:nth-child(1) {
-    margin-left: 65px;
+    margin-left: 17%;
   }
   .header-container {
     margin-top: 100px;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
   .header {
     margin-top: 0;
@@ -197,24 +220,5 @@ button:active {
   }
   .card-container {
     width: 90%;
-  }
-}
-@media screen and (max-width: 1250px) {
-  .layout > div:nth-child(2) {
-    position: relative;
-  }
-  .layout {
-    flex-direction: column-reverse;
-  }
-  .layout > div:nth-child(1) {
-    width: 100%;
-  }
-  .progress-container,
-  .total-score {
-    width: 100%;
-    margin: auto;
-  }
-  .rs-steps {
-    margin-left: 60px;
   }
 }
