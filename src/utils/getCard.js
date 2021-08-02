@@ -1,4 +1,4 @@
-export const getCards = ({ setData, setCount, setShowCard }) => {
+export const getCards = ({ setData, setCount, setShowCard}) => {
     setData((prevState) => ({
     drawnCards: [
       ...prevState.drawnCards,

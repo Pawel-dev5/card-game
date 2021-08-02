@@ -1,6 +1,5 @@
 import { result } from "../utils/result";
 import { NextButton } from "./NextButton";
-import { useState } from "react";
 export const Cards = ({
   data,
   setData,
@@ -13,10 +12,6 @@ export const Cards = ({
   score,
   setScore,
 }) => {
-
-  const [itemValue, setItemValue] = useState('')
-  const [secondItemValue, setSecondItemValue] = useState('')
-
   return (
     <>
       {data.drawnCards.length === 0 ? (
@@ -44,14 +39,10 @@ export const Cards = ({
                         setScore,
                         data,
                         count,
-                        itemValue,
-                        setItemValue,
-                        secondItemValue,
-                        setSecondItemValue
                       })
                     }
                   >
-                    Show Card
+                    Check
                   </button>
                 ) : (
                   <p>Bet next card</p>

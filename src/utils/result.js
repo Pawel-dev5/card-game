@@ -6,12 +6,7 @@ export const result = ({
   setScore,
   data,
   count,
-  setItemValue,
-  itemValue,
-  setSecondItemValue,
-  secondItemValue
 }) => {
-  console.log(count)
   const drawnCards = data.drawnCards;
   if (
     drawnCards.length !== 0 &&

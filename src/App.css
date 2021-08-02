@@ -10,14 +10,14 @@ body {
   display: flex;
 }
 .layout > div:nth-child(1) {
-  width: 17%;
+  width: 27%;
 }
 .layout > div:nth-child(2) {
   width: 100%;
   position: absolute;
 }
 .progress-container {
-  margin-top: 200px;
+  margin-top: 40px;
 }
 .rs-steps-item-content,
 .rs-steps-item-icon-wrapper {
@@ -39,8 +39,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 90%;
-  margin-left: 13rem;
-  margin-top: -100px;
+  margin-left: 10rem;
 }
 .header-container > div:nth-child(2) {
   display: flex;
@@ -106,7 +105,10 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.bet-box {
+  margin: 30px;
 }
 .header {
   margin-top: -100px;
@@ -165,10 +167,14 @@ button:active {
     height: 6.6rem;
   }
   .bet-buttons {
-    margin-bottom: 20px;
+    margin: 30px 0;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-evenly;
   }
   .bet-buttons > button {
     color: black !important;
+    margin-left: 0 !important;
   }
   img {
     width: 55%;
@@ -180,7 +186,7 @@ button:active {
     margin-left: 65px;
   }
   .header-container {
-    margin-top: 0;
+    margin-top: 100px;
     margin-bottom: 0;
   }
   .header {
@@ -191,5 +197,24 @@ button:active {
   }
   .card-container {
     width: 90%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .layout > div:nth-child(2) {
+    position: relative;
+  }
+  .layout {
+    flex-direction: column-reverse;
+  }
+  .layout > div:nth-child(1) {
+    width: 100%;
+  }
+  .progress-container,
+  .total-score {
+    width: 100%;
+    margin: auto;
+  }
+  .rs-steps {
+    margin-left: 60px;
   }
 }

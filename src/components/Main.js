@@ -3,7 +3,7 @@ import { Bet } from "./Bet";
 import { Cards } from "./Cards";
 import { Header } from "./Header";
 import { Finish } from "./Finish";
-import { ProgressBar } from './ProgressBar';
+import { ProgressBar } from "./ProgressBar";
 export const Main = () => {
   const [data, setData] = useState({
     cards: [],
@@ -43,9 +43,9 @@ export const Main = () => {
     28: 0,
     29: 0,
     30: 0,
-    total: 0
+    total: 0,
   });
-
+  // Getting data from API
   useEffect(() => {
     async function fetchMyAPI() {
       let response = await fetch(
@@ -67,17 +67,13 @@ export const Main = () => {
     }
     fetchMyAPI();
   }, []);
-
+  // Limit of rounds
   if (data.drawnCards.length !== 32) {
     return (
       <div className="layout">
         <ProgressBar count={count} score={score} />
         <div>
-          <Header
-            setCount={setCount}
-            count={count}
-            score={score}
-          />
+          <Header setCount={setCount} count={count} score={score} />
           <Bet
             drawnCards={data.drawnCards}
             count={count}
