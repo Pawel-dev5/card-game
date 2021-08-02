@@ -1,16 +1,68 @@
+body {
+  background-color: #308834;
+  font-family: Roboto, sans-serif;
+}
 .App {
   text-align: center;
 }
-.card-container {
+.header-container {
+  display: flex;
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+.header-container > div:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 90%;
+  margin-left: 13rem;
 }
-/* .card-container > div:not(:first-child) {
-  position: absolute;
-} */
+.header-container > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 10%;
+}
+.header-container > div > img {
+  width: 100%;
+}
+.card-container {
+  /* background-image: url(./assets/pokerTable.png);
+  background-size: cover;
+  height: 31rem; */
+  background-color: rgb(2, 87, 2);
+  border: 13px solid black;
+  border-radius: 215px;
+  width: 50%;
+  margin: auto;
+  -webkit-box-shadow: 0px 14px 40px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 14px 40px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 14px 40px 5px rgba(0, 0, 0, 0.75);
+}
+.card-container,
 .blank-card {
-  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+.card-container > div {
+  padding: 45px;
+}
+.card-container > div:nth-child(1) {
+  justify-content: flex-end;
+  display: flex;
+}
+.blank-card {
+  justify-content: flex-start;
+}
+.card-container > div {
+  width: 50%;
+  height: 100%;
+  min-width: 111px;
+  min-height: 159px;
+  display: flex;
+  align-items: center;
+}
+.blank-card > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,35 +79,43 @@
 .bet-continer > button {
   margin: 5px;
 }
+.bet-continer {
+  margin-bottom: 20px;
+}
 .bet-box,
 .header {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+.header {
+  margin-top: -100px;
+}
 .nav-buttons-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-button{
+button {
   padding: 8px 20px;
   max-height: 40px;
-  border-radius: 15px;
+  border-radius: 30px;
   margin: 7px;
   border: 1px solid black;
-  background-color:turquoise;
+  background-color: turquoise;
   font-size: 14px;
   font-weight: bold;
 }
-button:hover, button:focus, button:active {
-  background-color: #FF600F;
+button:hover,
+button:focus,
+button:active {
+  background-color: #ff600f;
 }
 .next-button {
   margin: 30px;
 }
 .next-button > button {
-  background-color: #FF600F;
+  background-color: #ff600f;
   color: black;
   font-size: 18px;
   padding: 10px 20px;
@@ -66,4 +126,45 @@ button:hover, button:focus, button:active {
   background-color: turquoise;
   /* color: #FF600F; */
   border: 2px solid black;
+}
+@media screen and (max-width: 600px) {
+  .bet-box,
+  .header {
+    flex-direction: column;
+  }
+  .card-container > div:nth-child(1) {
+    margin-right: 10px;
+  }
+  .card-container > div {
+    padding: 0;
+  }
+  .blank-card > div {
+    max-width: 5rem;
+    height: 6.6rem;
+  }
+  .bet-buttons {
+    margin-bottom: 20px;
+  }
+  img {
+    width: 55%;
+  }
+  .blank-card > div > button {
+    font-size: 12px;
+  }
+  .header-container > div:nth-child(1) {
+    margin-left: 65px;
+  }
+  .header-container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .header {
+    margin-top: 0;
+  }
+  .header-container > div:nth-child(2) {
+    width: 25%;
+  }
+  .card-container {
+    width: 90%;
+  }
 }

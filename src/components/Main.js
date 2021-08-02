@@ -8,10 +8,12 @@ export const Main = () => {
     cards: [],
     drawnCards: [],
   });
+  console.log(data);
   const [count, setCount] = useState(1);
   const [showCard, setShowCard] = useState(false);
   const [bet, setBet] = useState("");
   const [score, setScore] = useState(0);
+
   useEffect(() => {
     async function fetchMyAPI() {
       let response = await fetch(
@@ -37,7 +39,6 @@ export const Main = () => {
   if (data.drawnCards.length !== 32) {
     return (
       <div>
-        <h1>Card Bet Game</h1>
         <Header
           setCount={setCount}
           count={count}

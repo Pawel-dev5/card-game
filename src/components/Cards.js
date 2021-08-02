@@ -1,5 +1,6 @@
 import { result } from "../utils/result";
 import { NextButton } from "./NextButton";
+import { useState } from "react";
 export const Cards = ({
   data,
   setData,
@@ -12,6 +13,10 @@ export const Cards = ({
   score,
   setScore,
 }) => {
+
+  const [itemValue, setItemValue] = useState('')
+  const [secondItemValue, setSecondItemValue] = useState('')
+
   return (
     <>
       {data.drawnCards.length === 0 ? (
@@ -22,30 +27,36 @@ export const Cards = ({
             <img src={data.drawnCards[count - 1].image} alt="card" />
           </div>
           {showCard ? (
-            <div className="blank-card">
+            <div>
               <img src={data.drawnCards[count].image} alt="card" />
             </div>
           ) : (
             <div className="blank-card">
-              {bet ? (
-                <button
-                  onClick={() =>
-                    result({
-                      bet,
-                      setBet,
-                      setShowCard,
-                      score,
-                      setScore,
-                      data,
-                      count,
-                    })
-                  }
-                >
-                  Show Card
-                </button>
-              ) : (
-                <p>Bet next card</p>
-              )}
+              <div>
+                {bet ? (
+                  <button
+                    onClick={() =>
+                      result({
+                        bet,
+                        setBet,
+                        setShowCard,
+                        score,
+                        setScore,
+                        data,
+                        count,
+                        itemValue,
+                        setItemValue,
+                        secondItemValue,
+                        setSecondItemValue
+                      })
+                    }
+                  >
+                    Show Card
+                  </button>
+                ) : (
+                  <p>Bet next card</p>
+                )}
+              </div>
             </div>
           )}
         </div>
