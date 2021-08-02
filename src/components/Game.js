@@ -13,8 +13,7 @@ export const Game = ({
   setCount,
   setShowCard,
   setBet,
-  setScore,
-  clearTasks,
+  setScore
 }) => {
     console.log(data)
   // Limit of rounds
@@ -47,7 +46,6 @@ export const Game = ({
             data={data}
             setData={setData}
           />
-          <button onClick={clearTasks}>Clear</button>
         </div>
       </div>
     );

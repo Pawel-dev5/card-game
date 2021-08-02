@@ -81,10 +81,10 @@ export const Main = () => {
       );
     }
   });
-  const clearTasks = () => {
-    localStorage.setItem("sumData", JSON.stringify([]));
-    setSumData([]);
-  };
+  // const clearTasks = () => {
+  //   localStorage.setItem("sumData", JSON.stringify([]));
+  //   setSumData([]);
+  // };
   const localCount = localStorage.getItem("count");
   console.log(localCount);
   return (
@@ -111,7 +111,7 @@ export const Main = () => {
           setBet={setBet}
           score={score}
           setScore={setScore}
-          clearTasks={clearTasks}
+          // clearTasks={clearTasks}
           setSumData={setSumData}
         />
       )}
