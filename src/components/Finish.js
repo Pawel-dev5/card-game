@@ -1,6 +1,5 @@
 import { Score } from "./Score";
 import CardsPNG from "../assets/blackjack2.png";
-
 export const Finish = ({ score }) => {
   return (
     <div className="header-container">

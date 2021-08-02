@@ -1,5 +1,12 @@
 import CardsPNG from "../assets/blackjack2.png";
-export const Start = ({ setGame, game, setStart, setCount, sumData, setData }) => {
+export const Start = ({
+  setGame,
+  game,
+  setStart,
+  setCount,
+  sumData,
+  setData,
+}) => {
   console.log(game);
   const newGame = () => {
     setGame(true);
@@ -9,18 +16,12 @@ export const Start = ({ setGame, game, setStart, setCount, sumData, setData }) =
   const keepGame = () => {
     setGame(false);
     setStart(false);
-    setData(sumData)
+    setData(sumData);
   };
   return (
     <div className="header-container">
       <div>
-        {!sumData.lenght === 0 ? (
-          ""
-        ) : (
-          <>
-            <button onClick={keepGame}>Keep playing</button>
-          </>
-        )}
+        <button onClick={keepGame}>Keep playing</button>
         <button onClick={newGame}>New Game</button>
       </div>
       <div>
