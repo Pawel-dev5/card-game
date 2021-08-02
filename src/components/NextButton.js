@@ -1,12 +1,12 @@
 import { getCards } from "../utils/getCard";
-import { Test } from "./Test";
 export const NextButton = ({
   setData,
   setCount,
   setShowCard,
   count,
   showCard,
-  data
+  data,
+  sumData
 }) => {
   return (
     <div className="next-button">
@@ -18,7 +18,8 @@ export const NextButton = ({
               setCount,
               setShowCard,
               data,
-              count
+              count,
+              sumData
             })
           }
         >
@@ -34,7 +35,8 @@ export const NextButton = ({
                   setCount,
                   setShowCard,
                   data,
-                  count
+                  count,
+                  sumData
                 })
               }
             >
@@ -49,7 +51,8 @@ export const NextButton = ({
                   setCount,
                   setShowCard,
                   data,
-                  count
+                  count,
+                  sumData
                 })
               }
             >
@@ -58,7 +61,6 @@ export const NextButton = ({
           )}
         </>
       )}
-      {/* <Test/> */}
     </div>
   );
 };
