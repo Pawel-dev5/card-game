@@ -3,12 +3,12 @@ import { Bet } from "./Bet";
 import { Cards } from "./Cards";
 import { Header } from "./Header";
 import { Finish } from "./Finish";
+import { ProgressBar } from './ProgressBar';
 export const Main = () => {
   const [data, setData] = useState({
     cards: [],
     drawnCards: [],
   });
-  console.log(data);
   const [count, setCount] = useState(1);
   const [showCard, setShowCard] = useState(false);
   const [bet, setBet] = useState("");
@@ -70,35 +70,38 @@ export const Main = () => {
 
   if (data.drawnCards.length !== 32) {
     return (
-      <div>
-        <Header
-          setCount={setCount}
-          count={count}
-          score={score}
-        />
-        <Bet
-          drawnCards={data.drawnCards}
-          count={count}
-          bet={bet}
-          setBet={setBet}
-          setShowCard={setShowCard}
-          showCard={showCard}
-          score={score}
-          setScore={setScore}
-        />
-        <Cards
-          drawnCards={data.drawnCards}
-          count={count}
-          setCount={setCount}
-          bet={bet}
-          setBet={setBet}
-          setShowCard={setShowCard}
-          showCard={showCard}
-          score={score}
-          setScore={setScore}
-          data={data}
-          setData={setData}
-        />
+      <div className="layout">
+        <ProgressBar count={count} score={score} />
+        <div>
+          <Header
+            setCount={setCount}
+            count={count}
+            score={score}
+          />
+          <Bet
+            drawnCards={data.drawnCards}
+            count={count}
+            bet={bet}
+            setBet={setBet}
+            setShowCard={setShowCard}
+            showCard={showCard}
+            score={score}
+            setScore={setScore}
+          />
+          <Cards
+            drawnCards={data.drawnCards}
+            count={count}
+            setCount={setCount}
+            bet={bet}
+            setBet={setBet}
+            setShowCard={setShowCard}
+            showCard={showCard}
+            score={score}
+            setScore={setScore}
+            data={data}
+            setData={setData}
+          />
+        </div>
       </div>
     );
   } else return <Finish score={score} />;
