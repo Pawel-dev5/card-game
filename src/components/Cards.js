@@ -59,6 +59,7 @@ export const Cards = ({
         setCount={setCount}
         setShowCard={setShowCard}
         score={score}
+        data={data}
       />
     </>
   );

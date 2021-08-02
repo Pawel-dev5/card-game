@@ -3,6 +3,9 @@ body {
   font-family: Roboto, sans-serif;
   color: white !important;
 }
+input {
+  color: #000 !important;
+}
 .App {
   text-align: center;
 }
@@ -152,9 +155,8 @@ button:active {
   border: 2px solid black;
 }
 @media screen and (max-width: 1250px) {
-  .header-container{
+  .header-container {
     margin-bottom: -3em;
-
   }
   .layout > div:nth-child(2) {
     position: relative;
