@@ -19,6 +19,11 @@ export const result = ({
         [count]: score[count] + 0.1,
         total: score.total + 0.1
       }),
+      localStorage.setItem("score", JSON.stringify({
+        ...score,
+        [count]: score[count] + 0.1,
+        total: score.total + 0.1
+      })),
       setBet(""),
       setShowCard(true)
     )
@@ -33,6 +38,11 @@ export const result = ({
         [count]: score[count] + 0.1,
         total: score.total + 0.1
       }),
+      localStorage.setItem("score", JSON.stringify({
+        ...score,
+        [count]: score[count] + 0.1,
+        total: score.total + 0.1
+      })),
       setBet(""),
       setShowCard(true)
     )
@@ -47,12 +57,18 @@ export const result = ({
         [count]: score[count] + 0.1,
         total: score.total + 0.1
       }),
+      localStorage.setItem("score", JSON.stringify({
+        ...score,
+        [count]: score[count] + 0.1,
+        total: score.total + 0.1
+      })),
       setBet(""),
       setShowCard(true)
     )
   } else {
     return (
-      setBet(""),
+      setBet(""),      
+      // localStorage.setItem("score", JSON.stringify(score)),
       setShowCard(true)
     )
   }
