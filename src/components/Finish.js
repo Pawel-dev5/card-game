@@ -1,5 +1,7 @@
 import { Score } from "./Score";
 import CardsPNG from "../assets/blackjack2.png";
+import Confetti from "react-confetti";
+
 export const Finish = ({ score }) => {
   return (
     <>
@@ -12,6 +14,7 @@ export const Finish = ({ score }) => {
         <div>
           <img src={CardsPNG} alt="cards" />
         </div>
+        <Confetti className="confetti" friction={0.99} />
       </div>
     </>
   );

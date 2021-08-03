@@ -22,22 +22,27 @@ export const Start = ({
   const checkLocalStorage = JSON.parse(localStorage.getItem("sumData"));
   return (
     <>
-    <div className="header-container">
-      <div>
-        {checkLocalStorage !== null ? (
-          <Link to="/game">
-
-            <button onClick={keepGame}>Keep playing</button>
-          </Link>
-        ) : ("")}
-        <Link to="/game">
-          <button onClick={newGame}>New Game</button>
-        </Link>
+      <div className="header-container">
+        <div className="start-box">
+          <div>
+            <h1>The Best Card Bet Game</h1>
+            <h3>Let's play!</h3>
+          </div>
+          <div>
+            {checkLocalStorage !== null ? (
+              <Link to="/game">
+                <button onClick={keepGame}>Keep playing</button>
+              </Link>
+            ) : ("")}
+            <Link to="/game">
+              <button onClick={newGame}>New Game</button>
+            </Link>
+          </div>
+        </div>
+        <div>
+          <img src={CardsPNG} alt="cards" />
+        </div>
       </div>
-      <div>
-        <img src={CardsPNG} alt="cards" />
-      </div>
-    </div>
     </>
   );
 };
