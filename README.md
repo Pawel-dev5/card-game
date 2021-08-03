@@ -1,7 +1,11 @@
+## Live demo
+
+https://cardgame.pawelnowecki.pl/
+
 ## Game rules:
 
 - Player has one dice/card at a time
-- There are two buttons that the player uses to decide whether the next card/dice number will be higher or lower 
+- There are two buttons that the player uses to decide whether the next card/dice number will be higher or lower
 - Once the player chooses one of the options, he/she gets 0.1 point for the correct answer and a new dice/card is shown
 - There should be 30 rounds of the game
 
@@ -18,9 +22,10 @@
 - The project does not have time limitation, however it should not take more than a few hours
 - Any tools, frameworks, librialiers or packages can be used to complete the task
 - Submit the project the way you do when working with a team
-- This repository is created exclusively for your recruitment process and you can interact with it the way you like 
+- This repository is created exclusively for your recruitment process and you can interact with it the way you like
 
 ## Libraries used
+
 - "react": "^17.0.2",
 - "react-confetti": "^6.0.1",
 - "react-dom": "^17.0.2",
