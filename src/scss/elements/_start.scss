@@ -1,0 +1,16 @@
+.start-box {
+  display: flex;
+  flex-direction: column;
+  > div {
+    margin-top: 5rem;
+  }
+  > div:nth-child(1) > h3 {
+    margin-top: 50px;
+  }
+}
+.start-buttons {
+  margin-top: 5rem;
+  > a:nth-child(1) > button {
+    margin-left: 0 !important;
+  }
+}

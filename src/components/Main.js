@@ -2,12 +2,7 @@ import { Start } from "./Start";
 import { Game } from "./Game";
 import { useState, useEffect } from "react";
 import { rounds } from "../utils/rounds";
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Redirect
-} from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 export const Main = () => {
   const [start, setStart] = useState(true);
@@ -15,16 +10,12 @@ export const Main = () => {
   // Localstorage
   const storageData = JSON.parse(localStorage.getItem("sumData"));
   const storageCount = JSON.parse(localStorage.getItem("count"));
-  const storageScore = JSON.parse(localStorage.getItem('score'))
+  const storageScore = JSON.parse(localStorage.getItem("score"));
   const [sumData, setSumData] = useState(storageData || []);
-  console.log("SumData");
-  console.log(sumData);
   const [data, setData] = useState({
     cards: [],
     drawnCards: [],
   });
-  console.log("Data");
-  console.log(data);
   const [count, setCount] = useState(storageCount || 1);
   const [showCard, setShowCard] = useState(false);
   const [bet, setBet] = useState("");
@@ -50,22 +41,13 @@ export const Main = () => {
       }));
     }
     fetchMyAPI();
-    localStorage.setItem("score", JSON.stringify(rounds))
-
+    localStorage.setItem("score", JSON.stringify(rounds));
   }, []);
   useEffect(() => {
     if (data.drawnCards.length > 2) {
-      return (
-        localStorage.setItem("sumData", JSON.stringify(data))
-      );
+      return localStorage.setItem("sumData", JSON.stringify(data));
     }
   });
-  // const clearTasks = () => {
-  //   localStorage.setItem("sumData", JSON.stringify([]));
-  //   setSumData([]);
-  // };
-  const localCount = localStorage.getItem("count");
-  console.log(localCount);
   return (
     <>
       <BrowserRouter>
@@ -96,7 +78,6 @@ export const Main = () => {
                 score={score}
                 setScore={setScore}
                 setStart={setStart}
-                // clearTasks={clearTasks}
                 setSumData={setSumData}
               />
             </Route>

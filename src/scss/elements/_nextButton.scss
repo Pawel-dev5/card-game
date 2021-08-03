@@ -1,0 +1,15 @@
+.next-button {
+  margin: 30px;
+  button {
+    background-color: #ff600f;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    min-height: 50px;
+    min-width: 200px;
+  }
+  button:hover {
+    background-color: turquoise;
+    border: 2px solid black;
+  }
+}

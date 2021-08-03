@@ -3,11 +3,7 @@ import { Cards } from "./Cards";
 import { Header } from "./Header";
 import { Finish } from "./Finish";
 import { ProgressBar } from "./ProgressBar";
-import {
-  BrowserRouter,
-  Route,
-  Switch
-} from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 export const Game = ({
   data,
   count,
@@ -19,9 +15,8 @@ export const Game = ({
   setShowCard,
   setBet,
   setScore,
-  setStart
+  setStart,
 }) => {
-  console.log(data)
   // Limit of rounds
   if (data.drawnCards.length !== 32) {
     return (
@@ -61,5 +56,5 @@ export const Game = ({
         </Switch>
       </BrowserRouter>
     );
-  } else return <Finish score={score} setStart={setStart} />
+  } else return <Finish score={score} setStart={setStart} />;
 };

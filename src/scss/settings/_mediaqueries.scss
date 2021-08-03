@@ -1,0 +1,90 @@
+@media screen and (max-width: 1250px) {
+  .header-container {
+    margin-bottom: -3em;
+  }
+  .layout {
+    flex-direction: column-reverse;
+    > div:nth-child(1) {
+      width: 100%;
+    }
+    > div:nth-child(2) {
+      position: relative;
+    }
+  }
+  .progress-container,
+  .total-score {
+    width: 100%;
+    margin: auto;
+  }
+  .rs-steps {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .card-container {
+    width: 40rem;
+    > div > img {
+      height: 15rem;
+    }
+    .blank-card > div {
+      width: 11rem;
+      height: 15rem;
+    }
+  }
+}
+@media screen and (max-width: 645px) {
+  .bet-box {
+    flex-direction: column;
+    .bet-buttons {
+      margin: 30px 0;
+      min-width: 300px;
+      display: flex;
+      justify-content: space-evenly;
+      button {
+        color: black !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
+  .header-container {
+    margin-top: 100px;
+    margin-bottom: 3rem;
+    > div:nth-child(1) {
+      margin-left: 17%;
+    }
+    > div:nth-child(2) {
+      width: 25%;
+    }
+  }
+  .card-container {
+    width: 20rem;
+    height: 230px;
+    > div {
+      padding: 10px;
+      img {
+        width: 70%;
+      }
+    }
+    .blank-card {
+      padding: 10px;
+      max-width: 80px;
+      > div {
+        min-width: 0;
+        min-height: 0;
+        max-height: 123.5px;
+        max-width: 89px;
+        > button {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+  .start-box {
+    div > a > button {
+      min-width: 127px;
+    }
+    > div:nth-child(2) {
+      display: flex;
+    }
+  }
+}

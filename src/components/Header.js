@@ -1,5 +1,5 @@
 import { Score } from "./Score";
-import CardsPNG from '../assets/blackjack2.png';
+import CardsPNG from "../assets/blackjack2.png";
 export const Header = ({ score }) => {
   return (
     <>

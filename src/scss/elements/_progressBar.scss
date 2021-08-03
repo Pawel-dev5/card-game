@@ -1,0 +1,13 @@
+.progress-container {
+  margin-top: 40px;
+}
+.rs-steps-item-content,
+.rs-steps-item-icon-wrapper {
+  color: white !important;
+}
+.rs-steps-item-icon-wrapper:not(.rs-steps-item-custom-icon) {
+  border-color: white !important;
+}
+.rs-steps-small .rs-steps-item {
+  padding-left: 0 !important;
+}

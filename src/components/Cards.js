@@ -11,7 +11,7 @@ export const Cards = ({
   setShowCard,
   score,
   setScore,
-  setSumData
+  setSumData,
 }) => {
   return (
     <>
@@ -40,7 +40,7 @@ export const Cards = ({
                         setScore,
                         data,
                         count,
-                        setSumData
+                        setSumData,
                       })
                     }
                   >
