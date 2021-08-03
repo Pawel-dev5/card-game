@@ -1,6 +1,13 @@
 import { Start } from "./Start";
 import { Game } from "./Game";
 import { useState, useEffect } from "react";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+
 export const Main = () => {
   const [start, setStart] = useState(true);
   const [game, setGame] = useState(false);
@@ -89,32 +96,42 @@ export const Main = () => {
   console.log(localCount);
   return (
     <>
-      {start ? (
-        <Start
-          setData={setData}
-          setGame={setGame}
-          game={game}
-          start={start}
-          setStart={setStart}
-          setCount={setCount}
-          sumData={sumData}
-        />
-      ) : (
-        <Game
-          data={data}
-          setData={setData}
-          count={count}
-          setCount={setCount}
-          showCard={showCard}
-          setShowCard={setShowCard}
-          bet={bet}
-          setBet={setBet}
-          score={score}
-          setScore={setScore}
-          // clearTasks={clearTasks}
-          setSumData={setSumData}
-        />
-      )}
+      <BrowserRouter>
+        <Switch>
+          {start ? (
+            <Route exact path="/" component={Start}>
+              <Start
+                setData={setData}
+                setGame={setGame}
+                game={game}
+                start={start}
+                setStart={setStart}
+                setCount={setCount}
+                sumData={sumData}
+              />
+            </Route>
+          ) : (
+            <Route path="/game" component={Game}>
+              <Game
+                data={data}
+                setData={setData}
+                count={count}
+                setCount={setCount}
+                showCard={showCard}
+                setShowCard={setShowCard}
+                bet={bet}
+                setBet={setBet}
+                score={score}
+                setScore={setScore}
+                setStart={setStart}
+                // clearTasks={clearTasks}
+                setSumData={setSumData}
+              />
+            </Route>
+          )}
+          <Redirect exact from="/game" to="/" />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };

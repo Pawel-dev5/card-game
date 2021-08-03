@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CardsPNG from "../assets/blackjack2.png";
 export const Start = ({
   setGame,
@@ -20,18 +21,23 @@ export const Start = ({
   };
   const checkLocalStorage = JSON.parse(localStorage.getItem("sumData"));
   return (
+    <>
     <div className="header-container">
       <div>
         {checkLocalStorage !== null ? (
-          <>
+          <Link to="/game">
+
             <button onClick={keepGame}>Keep playing</button>
-          </>
+          </Link>
         ) : ("")}
-        <button onClick={newGame}>New Game</button>
+        <Link to="/game">
+          <button onClick={newGame}>New Game</button>
+        </Link>
       </div>
       <div>
         <img src={CardsPNG} alt="cards" />
       </div>
     </div>
+    </>
   );
 };
