@@ -18,10 +18,15 @@ export const Start = ({
     setStart(false);
     setData(sumData);
   };
+  const checkLocalStorage = JSON.parse(localStorage.getItem("sumData"));
   return (
     <div className="header-container">
       <div>
-        <button onClick={keepGame}>Keep playing</button>
+        {checkLocalStorage !== null ? (
+          <>
+            <button onClick={keepGame}>Keep playing</button>
+          </>
+        ) : ("")}
         <button onClick={newGame}>New Game</button>
       </div>
       <div>
