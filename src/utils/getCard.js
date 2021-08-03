@@ -1,5 +1,11 @@
-export const getCards = ({ setData, setCount, setShowCard}) => {
-    setData((prevState) => ({
+export const getCards = ({
+  setData,
+  setCount,
+  setShowCard,
+  data,
+  count,
+}) => {
+  setData((prevState) => ({
     drawnCards: [
       ...prevState.drawnCards,
       prevState.cards[prevState.cards.length - 1],
@@ -8,4 +14,6 @@ export const getCards = ({ setData, setCount, setShowCard}) => {
   }));
   setCount((prevCount) => prevCount + 1);
   setShowCard(false);
+  localStorage.setItem("sumData", JSON.stringify(data));
+  localStorage.setItem("count", JSON.stringify(Number(count + 1)));
 };

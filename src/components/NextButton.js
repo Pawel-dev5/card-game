@@ -5,6 +5,8 @@ export const NextButton = ({
   setShowCard,
   count,
   showCard,
+  data,
+  sumData
 }) => {
   return (
     <div className="next-button">
@@ -15,6 +17,9 @@ export const NextButton = ({
               setData,
               setCount,
               setShowCard,
+              data,
+              count,
+              sumData
             })
           }
         >
@@ -29,6 +34,9 @@ export const NextButton = ({
                   setData,
                   setCount,
                   setShowCard,
+                  data,
+                  count,
+                  sumData
                 })
               }
             >
@@ -42,6 +50,9 @@ export const NextButton = ({
                   setData,
                   setCount,
                   setShowCard,
+                  data,
+                  count,
+                  sumData
                 })
               }
             >

@@ -3,6 +3,9 @@ body {
   font-family: Roboto, sans-serif;
   color: white !important;
 }
+input {
+  color: #000 !important;
+}
 .App {
   text-align: center;
 }
@@ -29,10 +32,25 @@ body {
 .rs-steps-small .rs-steps-item {
   padding-left: 0 !important;
 }
+.start-box {
+  display: flex;
+  flex-direction: column;
+}
+.start-box > div{
+  margin-top: 5rem;
+}
+.confetti {
+  width: 100%;
+  height: 100%;
+}
 .header-container {
   display: flex;
   margin-top: -40px;
   margin-bottom: -12em;
+}
+.finish > div {
+  flex-direction: column;
+  min-height: 500px;
 }
 .header-container > div:nth-child(1) {
   display: flex;
@@ -151,10 +169,12 @@ button:active {
   /* color: #FF600F; */
   border: 2px solid black;
 }
+.finish-container{
+  flex-direction: column;
+}
 @media screen and (max-width: 1250px) {
-  .header-container{
+  .header-container {
     margin-bottom: -3em;
-
   }
   .layout > div:nth-child(2) {
     position: relative;
