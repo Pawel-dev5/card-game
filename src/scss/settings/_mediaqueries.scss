@@ -47,7 +47,7 @@
     }
   }
   .header-container {
-    margin-top: 100px;
+    margin-top: 2rem;
     margin-bottom: 3rem;
     > div:nth-child(1) {
       margin-left: 17%;
@@ -75,6 +75,8 @@
         max-width: 89px;
         > button {
           margin-left: 0 !important;
+          margin-right: 0;
+          padding: 12px 15px;
         }
       }
     }
