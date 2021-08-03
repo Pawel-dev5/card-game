@@ -31,7 +31,7 @@ export const Start = ({
           <div>
             {checkLocalStorage !== null ? (
               <Link to="/game">
-                <button onClick={keepGame}>Keep playing</button>
+                <button onClick={keepGame}>Previous game</button>
               </Link>
             ) : ("")}
             <Link to="/game">
